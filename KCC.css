@@ -1,49 +1,122 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial;
 }
+.wrapper {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100vh;
+}
+.wrapper div:first-child {
+    width: 40%;
+}
 .fakebooc {
-    width: 25%;
-    height: 25%;
-    margin: -20px;
-    padding: 0px;
-    border: 0;
-
+    width: 50%;
+    margin-left: -20px; 
 }
 h2 {
-    font-size: 30px;
-    text-align: center;
+    font-size: 28px;
+    font-weight: 300;
 }
 .text-pic {
-    font-size: 18px;
-    text-align: left;
+    font-size: 15px;
+    margin-bottom: 25px;
 }
 
 #accounts {
+    list-style-type: none;
     display: flex;
-    padding: 0;
+}
 
+#accounts li {
+    border: 1px solid gray;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+#accounts li span {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    padding: 5px;
+    top: 5px;
+    left: 5px;
+    color: white;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+}
+#accounts li span:hover {
+    padding: 15px;
+    color: rgba(0, 0, 0, 0.5);
+    background-color: white;
+    transform: translate(-10px,-10px);
+    z-index: 2;
+}
+#accounts li:not(:first-child) {
+    margin-left: 10px;
 }
 .avatar {
+    width: 170px;
     height: 160px;
-    width: 160px;
 }
-#login_pw {
-    color:white;
-}
-.box {
-    width: 400px;
-    height: 400px;
-    border: 3px solid gray;
-    position: relative;
-}
-.confirm {
-    width: 300px;
-    height: 70px;
+.username {
     text-align: center;
-    border: 5px 5px 5px 5px;
-    padding: 5px;
-    position: absolute;
-    bottom: 75px;
-    right: 55px;
-
+    padding: 12px;
+    font-size: 18px;
+}
+form {
+    padding: 10px 20px 24px 20px;
+    margin: 40px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+form > * {
+    margin: 10px 0;
+}
+input {
+    padding: 14px 16px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    width: 100%;
+}
+button {
+    padding: 10px 0;
+    border: 1px solid gray;
+    border-radius: 6px;
+    width: 100%;
+    color: white;
+    background-color:#1877F2;
+    font-size: 20px;
+}
+form a {
+    text-align: center;
+    text-decoration: none;
+}
+form div {
+   text-align: center;
+}
+.create-acc {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    width: 100%;
+    color: white;
+    background-color:#42B72A;
+    font-size: 20px;
 }
